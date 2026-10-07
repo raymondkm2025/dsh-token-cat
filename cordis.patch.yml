@@ -1,0 +1,8 @@
+# dsh-token-cat bundle patch: inserts the dual-face plugin row into the web
+# profile roster. The node half (exports ".") runs in the host process — it folds
+# real token usage out of the session log and serves it over /dsh-token-cat/*.
+# The dsh.client declaration in package.json loads the browser half
+# (exports "./client") in the web GUI, which draws the cat and the usage HUD.
+- insert:
+    - id: token-cat
+      name: 'dsh-token-cat'
